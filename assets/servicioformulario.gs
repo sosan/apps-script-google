@@ -1,23 +1,26 @@
 const hojadb = "14yfZ0dxrj8ED32Z2eOW0wgQTUmv3txGJRXWgprvBrno";
 
-// function doGet(request) 
+// function doGet(request)
 function doPost(request)
 {
-  Logger.log("Hola");
-  var sheet = SpreadsheetApp.openById(hojadb).getSheets()[0];
 
-  const id = request.parameter.id;
-  if (id != undefined)
+  if (request == undefined)
+  {
+    return ContentService.createTextOutput("KO");
+  }
+
+  let sheet = SpreadsheetApp.openById(hojadb).getSheets()[0];
+
+  if (request.parameter.campo1 != undefined)
   {
     sheet.appendRow([
-      request.parameter.id,
       request.parameter.campo1,
       request.parameter.campo2,
       request.parameter.campo3,
       request.parameter.campo4
     ]);
 
-    return ContentService.createTextOutput("OK");
+    return ContentService.createTextOutput(JSON.stringify({ok: "OK"}));
   }
 
   let datafromsheet = [];
@@ -27,11 +30,10 @@ function doPost(request)
       const row = data[i];
       datafromsheet.push(
       {
-          id: row[0],
-          campo1: row[1],
-          campo2: row[2],
-          campo3: row[3],
-          campo4: row[4]
+        campo1: row[1],
+        campo2: row[2],
+        campo3: row[3],
+        campo4: row[4]
       }
       );
   }
