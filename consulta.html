@@ -4,16 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
     
     <h1>Consultar datos</h1>
-    <form id="formulario_consulta"
-        action="https://script.google.com/macros/s/AKfycbwHr4OKJ81dHP5vCgFu6CYTzuzpxWOud-HrVLot0xvYsSeGUOAX6iUk/exec"
-        method="post">
-        <button type="submit" id="enviar">Consultar datos</button>
+    <h3 id="errores">&nbsp;</h3>
+    <form id="formulario_consulta" method="post">
+        <select name="categoria" id="categoria">
+            <option value="todos" selected>todos</option>
+            <option value="joyeria">joyerias</option>
+            <option value="colmado">colmados</option>
+            <option value="otros">otros</option>
+        </select>
+        <button type="submit" id="enviar" name="enviar" value="consulta">Consultar datos</button>
     </form>
 
+    <section id="tabla_seccion">
+    </section>
+
+    <br><br>
     <a href="./index.html">Pagina principal</a>
     <a href="./alta.html">Alta datos</a>
 

@@ -12,21 +12,32 @@
 
     <h3 id="alta_respuesta">&nbsp;</h3>
     <!-- url del formulario -->
-    <form id="formulario_alta" action="https://script.google.com/macros/s/AKfycbwHr4OKJ81dHP5vCgFu6CYTzuzpxWOud-HrVLot0xvYsSeGUOAX6iUk/exec" method="post">
-    <label for="campo1">Campo1:</label>
-    <input type="text" name="campo1" id="campo1" required>
+    <form id="formulario_alta" method="post" class="formulario_alta">
 
-    <label for="campo2">Campo2:</label>
-    <input type="text" name="campo2" id="campo2">
+        <label for="categoria">Categoria:</label>
+        <select name="categoria" id="categoria" required>
+            <option value="ninguno" selected>Seleccionar Categoria...</option>
+            <option value="joyeria">joyerias</option>
+            <option value="colmado">colmados</option>
+            <option value="otros">otros</option>
+        </select>
 
-    <label for="campo3">Campo3:</label>
-    <input type="text" name="campo3" id="campo3">
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" id="nombre">
 
-    <label for="campo4">Campo4:</label>
-    <input type="text" name="campo4" id="campo4">
+        <label for="direccion">Direccion:</label>
+        <input type="text" name="direccion" id="direccion">
 
-    <button type="submit" id="enviar">Enviar</button>
+        <label for="campo5">Campo5:</label>
+        <input type="text" name="campo5" id="campo5">
 
+        <label for="campo6">Campo6:</label>
+        <input type="text" name="campo6" id="campo6">
+
+        <label for="campo7">Campo7:</label>
+        <input type="text" name="campo7" id="campo7">
+
+        <button type="submit" id="enviar" name="enviar" value="alta">Enviar</button>
     </form>
 
     <a href="./index.html">Pagina principal</a>

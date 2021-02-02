@@ -1,4 +1,66 @@
-input
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-size: 15px;
+}
+
+.formulario_alta
 {
-    border: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+table {
+    display: grid;
+    border-collapse: collapse;
+    min-width: 100%;
+    grid-template-columns: 
+    1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr
+    ;
+    grid-template-rows: 40px;
+}
+
+thead,
+tbody,
+tr {
+    display: contents;
+}
+
+th,
+td {
+    padding: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+th {
+    background: #6c7ae0;
+    text-align: left;
+    color: white;
+}
+
+th:last-child {
+    border: 0;
+}
+
+td {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #808080;
+}
+
+tr:nth-child(even) td {
+    background: #f8f6ff;
 }
